@@ -47,15 +47,15 @@
     <Compile Include="Repository\ShuttleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
-      <Project>{0E9155B9-AF18-4B13-AFD9-AFFE4FE82AD3}</Project>
-      <Name>YoYoTestApp.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
+      <Project>{0e9155b9-af18-4b13-afd9-affe4fe82ad3}</Project>
+      <Name>YoYoTestApp.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

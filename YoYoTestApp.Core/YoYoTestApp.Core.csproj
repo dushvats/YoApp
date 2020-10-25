@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="fitnessrating_ Beeptest.json" />
+    <None Include="fitnessrating_Beeptest.json" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
