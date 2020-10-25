@@ -1,15 +1,26 @@
-﻿
+﻿@model YoYoTestApp.Web.ViewModels.YoYoTestViewModel
 @{
     ViewData["Title"] = "YoYoTest";
 }
 <script>
-
+    var pageNamespace = pageNamespace || { };
+    $(document).ready(function () {
+        pageNamespace.data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model, new Newtonsoft.Json.JsonSerializerSettings { ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore, PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None }));
+        pageNamespace.viewModel = new YoYoTestViewModel(pageNamespace.data, '@Url.Content("~/")', @(Model.MaxValue));
+    });
 </script>
 <div class="text-center">
-    <h1 class="display-4">YoYoTest</h1>
-    <div id="circle-1" data-circle-size="250px">
-        <div class="loader-bg">
-            <div class="text">00:00:00</div>
+    <h1 class="display-4 text-center" style="color:white !important;">YoYoTest</h1>
+    <div class="row">&nbsp;</div>
+    <div class="row" style="justify-content:center !important;margin-left:0% !important;">
+        <button class="btn btn-primary" id="startTimerButton" onclick="pageNamespace.viewModel.startTimer()">Start Timer</button>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row" style="justify-content:center !important;margin-left:0% !important;">
+        <div id="circle-1" data-circle-size="250px">
+            <div class="loader-bg">
+                <div class="text">00:00:00</div>
+            </div>
         </div>
     </div>
 </div>

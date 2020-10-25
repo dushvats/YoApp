@@ -39,9 +39,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Data\JSONReadWrite.cs" />
     <Compile Include="Repository\ShuttleRepository.cs" />
@@ -52,6 +50,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YoYoTestApp.Application\YoYoTestApp.Application.csproj">
+      <Project>{B2747CDF-F288-4E87-893B-B60E8EC67F14}</Project>
+      <Name>YoYoTestApp.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
       <Project>{0e9155b9-af18-4b13-afd9-affe4fe82ad3}</Project>
       <Name>YoYoTestApp.Core</Name>

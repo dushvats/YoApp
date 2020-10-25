@@ -14,8 +14,8 @@ namespace YoYoTestApp.Infrastructure.Data
         public string Read(string fileName)
         {
             //string root = "wwwroot";
-            string root = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            var path = string.Format("{0}{1}{2}",root, "\\", fileName);
+            string root = Directory.GetParent(Environment.CurrentDirectory).FullName;
+            var path = string.Format("{0}{1}{2}",root, "\\YoYoTestApp.Core\\", fileName);
 
             string jsonResult;
 

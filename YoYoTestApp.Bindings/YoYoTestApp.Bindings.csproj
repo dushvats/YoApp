@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E9155B9-AF18-4B13-AFD9-AFFE4FE82AD3}</ProjectGuid>
+    <ProjectGuid>{D992C06E-8AEB-41BB-B040-039F26774A98}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>YoYoTestApp.Core</RootNamespace>
-    <AssemblyName>YoYoTestApp.Core</AssemblyName>
+    <RootNamespace>YoYoTestApp.Bindings</RootNamespace>
+    <AssemblyName>YoYoTestApp.Bindings</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,12 +37,30 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="fitnessrating_Beeptest.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Shuttle.cs" />
-    <Compile Include="Interfaces\IShuttleRepository.cs" />
+    <ProjectReference Include="..\YoYoTestApp.Application\YoYoTestApp.Application.csproj">
+      <Project>{b2747cdf-f288-4e87-893b-b60e8ec67f14}</Project>
+      <Name>YoYoTestApp.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
+      <Project>{0e9155b9-af18-4b13-afd9-affe4fe82ad3}</Project>
+      <Name>YoYoTestApp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YoYoTestApp.Infrastructure\YoYoTestApp.Infrastructure.csproj">
+      <Project>{797a9c37-11e5-47f6-8a5a-d684d8aea164}</Project>
+      <Name>YoYoTestApp.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bindings\Bindings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

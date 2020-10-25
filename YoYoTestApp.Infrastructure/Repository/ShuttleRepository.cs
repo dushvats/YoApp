@@ -19,8 +19,7 @@ namespace YoYoTestApp.Infrastructure.Repository
         public async Task<IEnumerable<Shuttle>> GetAll()
         {
             JSONReadWrite readWrite = new JSONReadWrite();
-            var shuttles = JsonConvert.DeserializeObject<List<Shuttle>>(readWrite.Read("fitnessrating_Beeptest.json")); ;
-
+            var shuttles = JsonConvert.DeserializeObject<List<Shuttle>>(readWrite.Read("fitnessrating_Beeptest.json"));
             return shuttles;
         }
     }

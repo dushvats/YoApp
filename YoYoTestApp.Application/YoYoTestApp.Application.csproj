@@ -37,14 +37,26 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Mapper\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Dtos\ShuttleDto.cs" />
+    <Compile Include="Interfaces\IShuttleService.cs" />
+    <Compile Include="Mapper\Mapper.cs" />
+    <Compile Include="Services\ShuttleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
+      <Project>{0E9155B9-AF18-4B13-AFD9-AFFE4FE82AD3}</Project>
+      <Name>YoYoTestApp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - YoYoTestApp.Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="//www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="~/js/assets/circle.css">
@@ -14,13 +18,13 @@
     <link rel="stylesheet" type="text/css" href="~/js/assets/skins/firecircle.css">
     <link rel="stylesheet" type="text/css" href="~/js/assets/skins/whitecircle.css">
     <link rel="stylesheet" type="text/css" href="~/js/assets/skins/simplecircle.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">   
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    @*<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">*@
     <!-- Optionally add this to use a skin : -->
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">
-    <link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/circle.css">
+    @*<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">*@
+    @*<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/circle.css">*@
     <!-- Optionally add this to use a skin : -->
-    <link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/skins/whitecircle.css">
+    @*<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/skins/whitecircle.css">*@
 </head>
 <body>
     <header>
@@ -55,13 +59,9 @@
             &copy; 2020 - YoYoTestApp.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
     <script type="text/javascript" src="~/js/assets/circle.js"></script>
-    <script src="node-modules/circlebars/dist/circle.js"></script>
-    <script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>
+    @*<script src="~/js/dist/circle.js"></script>*@
     <script src="~/js/YoYoTestViewModel.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
