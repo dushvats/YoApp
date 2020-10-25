@@ -36,9 +36,10 @@
     <None Include="App.config" />
     <None Include="fitnessrating_ Beeptest.json" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
+    <Compile Include="Entities\Shuttle.cs" />
+    <Compile Include="Interfaces\IShuttleRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

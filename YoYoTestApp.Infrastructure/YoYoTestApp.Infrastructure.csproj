@@ -34,11 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Repository\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\JSONReadWrite.cs" />
+    <Compile Include="Repository\ShuttleRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YoYoTestApp.Core\YoYoTestApp.Core.csproj">
+      <Project>{0E9155B9-AF18-4B13-AFD9-AFFE4FE82AD3}</Project>
+      <Name>YoYoTestApp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
