@@ -8,13 +8,13 @@ namespace YoYoTestApp.Application.Dtos
 {
     public class ShuttleDto
     {
-        public string AccumulatedShuttleDistance { get; set; }
-        public string SpeedLevel { get; set; }
-        public string ShuttleNo { get; set; }
-        public string Speed { get; set; }
-        public string LevelTime { get; set; }
-        public string CommulativeTime { get; set; }
-        public string StartTime { get; set; }
-        public string ApproxVo2Max { get; set; }
+        public int AccumulatedShuttleDistance { get; set; }
+        public int SpeedLevel { get; set; }
+        public int ShuttleNo { get; set; }
+        public float Speed { get; set; }
+        public float LevelTime { get; set; }
+        public TimeSpan? CommulativeTime { get; set; }
+        public TimeSpan? StartTime { get; set; }
+        public float ApproxVo2Max { get; set; }
     }
 }

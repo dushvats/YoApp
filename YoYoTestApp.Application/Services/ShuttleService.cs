@@ -25,12 +25,14 @@ namespace YoYoTestApp.Application.Services
         {
             var shuttles = await _shuttleRepository.GetAll();
             var shuttleDtos = _mapper.Map<List<Shuttle>, List<ShuttleDto>>(shuttles.ToList());
-            return shuttleDtos;
+            return shuttleDtos.OrderBy(x => x.StartTime).ToList();
         }
         public async Task<int> MaxValueForTimer()
         {
             int maxValue = 15;
-            
+            var shuttles = GetAllShuttles().Result;
+            var lastStartTime = shuttles.LastOrDefault().StartTime;
+            maxValue = lastStartTime.HasValue ? Convert.ToInt32(lastStartTime.Value.TotalSeconds) : 0;
             return maxValue;
         }
 
