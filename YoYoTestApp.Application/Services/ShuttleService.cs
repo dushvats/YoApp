@@ -31,7 +31,7 @@ namespace YoYoTestApp.Application.Services
         {
             int maxValue = 15;
             var shuttles = GetAllShuttles().Result;
-            var lastStartTime = shuttles.LastOrDefault().StartTime;
+            var lastStartTime = shuttles.LastOrDefault().CommulativeTime;
             maxValue = lastStartTime.HasValue ? Convert.ToInt32(lastStartTime.Value.TotalSeconds) : 0;
             return maxValue;
         }
